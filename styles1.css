@@ -21,8 +21,8 @@ body {
 #envb {
   color: transparent;
   background-color: transparent;
-  width: 400px;
-  height: 289px;
+  width: 350px;
+  height: 250px;
   display: inline-block;
 }
 
@@ -36,7 +36,7 @@ h5 {
 }
 
 .carta img {
-  width: 430px;
+  width: 380px;
   margin-top: -10px;
   margin-left: -15px;
 }
