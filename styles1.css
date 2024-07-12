@@ -152,14 +152,14 @@ h5 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
-  grid-row-end: 2:
+  grid-row-end: 2;
 }
 
 .toten3a {
  grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
-  grid-row-end: 3:  
+  grid-row-end: 3;  
 }
 
 .toten4 {
@@ -169,14 +169,14 @@ h5 {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 2:
+  grid-row-end: 2;
 }
 
 .toten4a {
   grid-column-start: 2;
   grid-column-end: 3; 
   grid-row-start: 2;
-  grid-row-end: 3:
+  grid-row-end: 3;
 }
 
 .toten1 {
@@ -184,21 +184,21 @@ h5 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
-  grid-row-end: 2:
+  grid-row-end: 2;
 }
 
 .toten2 {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 2:
+  grid-row-end: 2;
 }
 
 .toten1a {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
-  grid-row-end: 3:
+  grid-row-end: 3;
   
 }
 
@@ -206,7 +206,7 @@ h5 {
   grid-column-start: 2;
   grid-column-end: 3; 
   grid-row-start: 2;
-  grid-row-end: 3:
+  grid-row-end: 3;
 }
 
 .templetext {
@@ -436,7 +436,7 @@ a {
 
 .animation5, .container1, .container2, .container3, .container4 { 
   opacity: 0;
-  transition: opacity 1s ease-out;
+  transition: opacity 2s ease-out;
   margin-top: 80px;
 }
 
