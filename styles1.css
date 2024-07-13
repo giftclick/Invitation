@@ -31,7 +31,7 @@ body {
 footer {
   text-align: center;
   background-color: #fbf0e5;
-  height: 140px;
+  height: 150px;
   width: 100%;
   position: relative;
   z-index: 5;
@@ -963,6 +963,45 @@ a {
   #containerroses {
     margin: auto;
     padding-left: 840px;
+  }
+
+}
+
+@media (max-width: 398px) {
+
+#svggiftclick {
+  margin-bottom: 0px;
+  margin-left: 1%;
+  margin-top: -20px;
+}
+
+footer {
+  height: 170px;
+  padding-top: 23px;
+}
+
+footer div p {
+    margin-left: 0px;
+    text-align: center;
+}
+  
+.footnumber{
+   margin: -25px; 
+}
+  
+.footergitfclick {
+  display: flex;
+  flex-direction: column;
+}
+
+.carta img {
+    width: 300px;
+  }
+  #envb {
+    width: 270px;
+    height: 196px;
+  }  
+      
   }
 
 }
