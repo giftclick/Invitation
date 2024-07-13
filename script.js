@@ -1,3 +1,39 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const countdownDate = new Date('August 31, 2024 12:00:00').getTime();
+
+  const daysElement = document.getElementById('days');
+  const hoursElement = document.getElementById('hours');
+  const minutesElement = document.getElementById('minutes');
+  const secondsElement = document.getElementById('seconds');
+
+  function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysElement.textContent = days.toString().padStart(2, '0');
+      hoursElement.textContent = hours.toString().padStart(2, '0');
+      minutesElement.textContent = minutes.toString().padStart(2, '0');
+      secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+      if (distance < 0) {
+          clearInterval(interval);
+          daysElement.textContent = '00';
+          hoursElement.textContent = '00';
+          minutesElement.textContent = '00';
+          secondsElement.textContent = '00';
+          // Puedes agregar un mensaje o realizar otra acción cuando se complete la cuenta regresiva
+      }
+  }
+
+  const interval = setInterval(updateCountdown, 1000);
+  updateCountdown(); // Llamar inmediatamente para evitar el retraso inicial
+});
+
 var strokesLeftBottom = $('#LeftBottomGroup_1_ path[id^=Stroke]').toArray().reverse();
 var strokesLeftTop = $('#LeftTopGroup_1_ path[id^=Stroke]').toArray().reverse();
 var strokesRightBottom = $('#RightBottomGroup_1_ path[id^=Stroke]').toArray().reverse();
@@ -162,4 +198,43 @@ document.addEventListener('scroll', function() {
         block.classList.add('show');
       }
     });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const music = document.getElementById('music');
+    const playBtn = document.getElementById('play-btn');
+    const stopBtn = document.getElementById('stop-btn');
+    const playIcon = playBtn.querySelector('i');
+  
+    // Controlar el botón de reproducción
+    playBtn.addEventListener('click', function() {
+      if (music.paused) {
+        music.play();
+        playIcon.classList.remove('fa-play');
+        playIcon.classList.add('fa-pause');
+      } else {
+        music.pause();
+        playIcon.classList.remove('fa-pause');
+        playIcon.classList.add('fa-play');
+      }
+    });
+  
+    // Controlar el botón de detener
+    stopBtn.addEventListener('click', function() {
+      music.pause();
+      music.currentTime = 0;
+      playIcon.classList.remove('fa-pause');
+      playIcon.classList.add('fa-play');
+    });
+  
+    // Reproducir música automáticamente cuando se carga la página si es permitido
+    const playPromise = music.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        // La reproducción comenzó con éxito
+      }).catch(error => {
+        // La reproducción automática fue bloqueada
+        console.log('Autoplay failed:', error);
+      });
+    }
   });
