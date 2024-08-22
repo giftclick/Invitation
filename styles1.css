@@ -603,7 +603,9 @@ a {
   justify-content: center;
   align-items: center;
 }
-
+#space {
+  margin-bottom: 30px;
+}
 .container3-5 {
   background-image: url("download.svg");
   background-size: cover;
